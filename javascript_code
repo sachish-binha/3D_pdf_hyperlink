@@ -10,7 +10,7 @@ var myMouseHandler = function( event ) {
 
 					
 				else { 
-					host.app.alert("You clicked on " + myMesh.name);
+					host.app.alert("Your comment if an unlinked object is clicked" + myMesh.name);
 					}	
 					
 				}
