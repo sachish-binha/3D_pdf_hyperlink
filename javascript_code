@@ -1,0 +1,24 @@
+var myMouseHandler = function( event ) {
+         if ( event.isMouseUp ) {
+		var myMesh = null;
+		if ( event.hits.length > 0 ) myMesh = event.hits[0].target;
+		if ( myMesh != null ) {
+				if ( myMesh.name == "your 3D object name" ) {
+					
+			host.app.launchURL("your link");
+					}
+
+					
+				else { 
+					host.app.alert("You clicked on " + myMesh.name);
+					}	
+					
+				}
+			}
+		}
+var mouseEventHandler = new MouseEventHandler();
+mouseEventHandler.onMouseDown = false;
+mouseEventHandler.onMouseMove = false;
+mouseEventHandler.onMouseUp = true;
+mouseEventHandler.onEvent = myMouseHandler;
+runtime.addEventHandler( mouseEventHandler );
